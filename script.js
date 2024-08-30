@@ -13,6 +13,7 @@ function effectOn(id){
     images.forEach(function (image) {
         image.addEventListener('mouseover', function() {
             image.style.border = '5px solid black';
+            image.style.filter = 'drop-shadow(6px 6px 2px gray)';
         });
     });
 }
@@ -25,6 +26,7 @@ function effectOff(id){
     images.forEach(function (image) {
         image.addEventListener('mouseout', function() {
             image.style.border = '';
+            image.style.filter = '';
          });
     });
 }
