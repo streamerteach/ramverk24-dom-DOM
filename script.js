@@ -12,8 +12,9 @@ function effectOn(id){
 
     images.forEach(function (image) {
         image.addEventListener('mouseover', function() {
-            image.style.border = '5px solid black';
+            image.style.border = '3px solid black';
             image.style.filter = 'drop-shadow(6px 6px 2px gray)';
+            image.style.cursor = 'pointer';
         });
     });
 }
