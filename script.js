@@ -2,9 +2,21 @@ window.onload = function() {
     // Lyssna efter händelser
     effectOn();
     effectOff();
+
+    const teamMember = document.querySelectorAll('.team-member');
+
+    teamMember.forEach(function(member){
+        member.addEventListener("click", editTitle)
+    });
 }
 var editTitle = function(e) {
     // Ändra "team-title"
+    const newTitle = prompt("Enter a new title");
+
+    if (newTitle){
+        const currentTitle = e.currentTarget.querySelector('.team-title');
+        currentTitle.textContent = newTitle;
+    }
 };
 function effectOn(id){
     // Rita en ram runt personen, kanske lite drop shadow?
